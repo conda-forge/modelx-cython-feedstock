@@ -1,20 +1,20 @@
 {% set name = "modelx-cython" %}
-{% set version = "0.0.4" %}
+{% set version = "0.0.5" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/modelx-cython-{{ version }}.tar.gz
-  sha256: f016c441a26a741734ac53b3a642b819260f4160686f6a8567aeadb13a8d520a
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: f2f9e1a127381cd35b954f80e1112666e81766d5c8cdab99c6bb04d5db0d7084
 
 build:
   skip: true  # [py<37]
   entry_points:
     - mx2cy = modelx_cython.cli:entry_point_main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   build:
