@@ -14,7 +14,7 @@ build:
   entry_points:
     - mx2cy = modelx_cython.cli:entry_point_main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   build:
