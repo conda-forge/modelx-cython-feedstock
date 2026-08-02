@@ -1,5 +1,5 @@
 {% set name = "modelx-cython" %}
-{% set version = "0.0.8" %}
+{% set version = "0.0.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 643e5e01c934d3e22cd79e0ceac5f1bdbc06f6f68c4fe172677be4b4851b3a98
+  sha256: d75dfef2b9f6196e11f6b9714392ab085128dba15ddae4e54dc6e61eaf5f9aec
 
 build:
   skip: true  # [py<37]
